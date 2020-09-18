@@ -31,9 +31,9 @@ From: ubuntu:18.04
     # Go get scripts from Github
     apt-get -y install git npm
     npm install -g github-files-fetcher
-    fetcher --url=https://github.com/grahamwjohnson/fs_accre/tree/master/singularity/license.txt --out=/APPS/freesurfer
-    fetcher --url=https://github.com/grahamwjohnson/fs_accre/tree/master/singularity/main.sh --out=/CODE
-    fetcher --url=https://github.com/grahamwjohnson/fs_accre/tree/master/singularity/fs_files --out=/CODE
+    fetcher --url=https://github.com/grahamwjohnson/accre_fs/tree/master/singularity/license.txt --out=/APPS/freesurfer
+    fetcher --url=https://github.com/grahamwjohnson/accre_fs/tree/master/singularity/main.sh --out=/CODE
+    fetcher --url=https://github.com/grahamwjohnson/accre_fs/tree/master/singularity/fs_files --out=/CODE
 
     # Install xvfb
     apt-get -y install xvfb
