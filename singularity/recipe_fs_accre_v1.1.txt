@@ -31,7 +31,6 @@ From: ubuntu:18.04
     # Go get scripts from Github
     apt-get -y install git npm
     npm install -g github-files-fetcher
-    fetcher --url=https://github.com/grahamwjohnson/accre_fs/tree/master/singularity/license.txt --out=/APPS/freesurfer
     fetcher --url=https://github.com/grahamwjohnson/accre_fs/tree/master/singularity/main.sh --out=/CODE
     fetcher --url=https://github.com/grahamwjohnson/accre_fs/tree/master/singularity/fs_files --out=/CODE
 
@@ -47,6 +46,10 @@ From: ubuntu:18.04
     tar -C /APPS -xzvf /INSTALLERS/freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz
     echo "This is a dummy license file. Please bind your freesurfer license file to this file." > /APPS/freesurfer/license.txt
     cd /
+
+
+    # Have to put license in directory AFTER install
+    fetcher --url=https://github.com/grahamwjohnson/accre_fs/tree/master/singularity/license.txt --out=/APPS/freesurfer
 
     # Clean up
     rm -r /INSTALLERS
