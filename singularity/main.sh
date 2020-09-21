@@ -8,6 +8,8 @@ export FREESURFER_HOME=/APPS/freesurfer
 source $FREESURFER_HOME/SetUpFreeSurfer.sh
 export SUBJECTS_DIR=/OUTPUTS
 
-echo "running command: recon-all -i /INPUTS/t1.nii.gz -s FS -all -parallel -openmp $THREADS"
-recon-all -i /INPUTS/t1.nii.gz -s FS -all -parallel -openmp $THREADS
+NAME="freesurfer_reconall_$(date +"%Y_%m_%d_%H%M%S")"
+
+echo "running command: recon-all -i /INPUTS/t1.nii.gz -s $NAME -all -parallel -openmp $THREADS"
+recon-all -i /INPUTS/t1.nii.gz -s $NAME -all -parallel -openmp $THREADS
 
