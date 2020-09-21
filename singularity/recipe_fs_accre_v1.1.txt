@@ -18,13 +18,6 @@ From: ubuntu:18.04
     mkdir -p OUTPUTS
     mkdir -p CODE
 
-    # Set Permissions
-    chmod -R 775 /INPUTS
-    chmod -R 775 /SUPPLEMENTAL
-    chmod -R 775 /APPS
-    chmod -R 775 /OUTPUTS 
-    chmod -R 775 /CODE
-
     # Update all libraries
     apt-get -y update
 
@@ -50,6 +43,13 @@ From: ubuntu:18.04
 
     # Have to put license in directory AFTER install
     fetcher --url=https://github.com/grahamwjohnson/accre_fs/tree/master/singularity/license.txt --out=/APPS/freesurfer
+
+    # Set Permissions
+    chmod -R 775 /INPUTS
+    chmod -R 775 /SUPPLEMENTAL
+    chmod -R 775 /APPS
+    chmod -R 775 /OUTPUTS 
+    chmod -R 775 /CODE
 
     # Clean up
     rm -r /INSTALLERS
